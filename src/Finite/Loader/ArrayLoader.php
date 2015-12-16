@@ -187,6 +187,7 @@ class ArrayLoader implements LoaderInterface
 
         $resolver->setDefaults(
             array(
+                'disabled' => false,
                 'on' => array(),
                 'from' => array(),
                 'to' => array(),
@@ -195,6 +196,7 @@ class ArrayLoader implements LoaderInterface
 
         $resolver->setRequired(array('do'));
 
+        $resolver->setAllowedTypes('disabled', array('bool'));
         $resolver->setAllowedTypes('on',   array('string', 'array'));
         $resolver->setAllowedTypes('from', array('string', 'array'));
         $resolver->setAllowedTypes('to',   array('string', 'array'));

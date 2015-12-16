@@ -124,7 +124,7 @@ class ArrayLoaderTest extends \PHPUnit_Framework_TestCase
                 ),
                 'callbacks'   => array(
                     'before' => array(
-                        array('on' => 'middleize', 'do' => $beforeMiddleize),
+                        array('disabled' => false, 'on' => 'middleize', 'do' => $beforeMiddleize),
                         array('from' => 'start', 'to' => '-middle', 'do' => $fromStartToOtherThanMiddle)
                     ),
                     'after'  => array(
